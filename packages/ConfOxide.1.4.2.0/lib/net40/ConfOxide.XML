@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConfOxide</name>
+    </assembly>
+    <members>
+        <member name="T:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3">
+            <summary>A PropertyAccessor for a property that holds a generic collection of a <see cref="T:ConfOxide.SettingsBase`1"/> type.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.#ctor(System.Reflection.PropertyInfo)">
+            <summary>Creates a <see cref="T:ConfOxide.MemberAccess.CollectionPropertyAccessor`3"/> for the specified property.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.InitializeValue(`0)">
+            <summary>Initializes this property to a new collection.  This is only called when the instance is first constructed.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.Copy(`0,`0)">
+            <summary>Copies the value of this property from one owning object to another.</summary>
+            <param name="from">The instance to read the value from.</param>
+            <param name="to">The instance to write the value to.</param>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.ResetValue(`0)">
+            <summary>Resets the value of this property on an owning object to its default value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.CompareValues(`0,`0)">
+            <summary>Compares the values of the property from two owning objects.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.FromJson(`0,Newtonsoft.Json.Linq.JToken)">
+            <summary>Reads this property's value from a JSON token into an instance.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.SettingsCollectionPropertyAccessor`3.UpdateJsonProperty(`0,Newtonsoft.Json.Linq.JProperty)">
+            <summary>Updates the value of a JProperty to reflect this property's value.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.IPropertyAccessor`1">
+            <summary>Describes and manipulates a specific property in a settings class.</summary>
+            <typeparam name="T">The type that owns the property.</typeparam>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.IPropertyAccessor`1.Property">
+            <summary>Gets the property being accessed.</summary>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.IPropertyAccessor`1.JsonName">
+            <summary>Gets the name to use when serializing this property to JSON.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.InitializeValue(`0)">
+            <summary>Initializes the property, preparing it to hold actual data.  This is only called when the instance is first constructed.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.CompareValues(`0,`0)">
+            <summary>Compares the values of the property from two owning objects.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.Copy(`0,`0)">
+            <summary>Copies the value of this property from one owning object to another.</summary>
+            <param name="from">The instance to read the value from.</param>
+            <param name="to">The instance to write the value to.</param>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.FromJson(`0,Newtonsoft.Json.Linq.JToken)">
+            <summary>Reads this property's value from a JSON token into an instance.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.ResetValue(`0)">
+            <summary>Resets the value of this property on an owning object to its default value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.IPropertyAccessor`1.UpdateJsonProperty(`0,Newtonsoft.Json.Linq.JProperty)">
+            <summary>Updates the value of a JProperty to reflect this property's value.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.ITypedPropertyAccessor`2">
+            <summary>A strongly-typed <see cref="T:ConfOxide.MemberAccess.IPropertyAccessor`1"/> that exposes the property's value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ITypedPropertyAccessor`2.GetValue(`0)">
+            <summary>Gets the value of this property from the specified instance.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.CollectionPropertyAccessor`3">
+            <summary>A PropertyAccessor for a property that holds a generic collection of a scalar type.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.#ctor(System.Reflection.PropertyInfo)">
+            <summary>Creates a <see cref="T:ConfOxide.MemberAccess.CollectionPropertyAccessor`3"/> for the specified property.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.InitializeValue(`0)">
+            <summary>Initializes this property to a new collection.  This is only called when the instance is first constructed.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.Copy(`0,`0)">
+            <summary>Copies the value of this property from one owning object to another.</summary>
+            <param name="from">The instance to read the value from.</param>
+            <param name="to">The instance to write the value to.</param>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.ResetValue(`0)">
+            <summary>Resets the value of this property on an owning object to its default value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.CompareValues(`0,`0)">
+            <summary>Compares the values of the property from two owning objects.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.FromJson(`0,Newtonsoft.Json.Linq.JToken)">
+            <summary>Reads this property's value from a JSON token into an instance.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.CollectionPropertyAccessor`3.UpdateJsonProperty(`0,Newtonsoft.Json.Linq.JProperty)">
+            <summary>Updates the value of a JProperty to reflect this property's value.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.NestedPropertyAccessor`2">
+            <summary>A PropertyAccessor for properties that hold nested <see cref="T:ConfOxide.SettingsBase`1"/> classes.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.#ctor(System.Reflection.PropertyInfo)">
+            <summary>Creates a <see cref="T:ConfOxide.MemberAccess.NestedPropertyAccessor`2"/> for the specified property.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.InitializeValue(`0)">
+            <summary>Initializes this property to a new collection.  This is only called when the instance is first constructed.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.CompareValues(`0,`0)">
+            <summary>Compares the values of the property from two owning objects.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.Copy(`0,`0)">
+            <summary>Copies the value of this property from one owning object to another.</summary>
+            <param name="from">The instance to read the value from.</param>
+            <param name="to">The instance to write the value to.</param>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.ResetValue(`0)">
+            <summary>Resets the value of this property on an owning object to its default value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.FromJson(`0,Newtonsoft.Json.Linq.JToken)">
+            <summary>Reads this property's value from a JSON token into an instance.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.NestedPropertyAccessor`2.UpdateJsonProperty(`0,Newtonsoft.Json.Linq.JProperty)">
+            <summary>Updates the value of a JProperty to reflect this property's value.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.TypedPropertyAccessor`2">
+            <summary>A base class for a strongly-typed property accessor.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypedPropertyAccessor`2.#ctor(System.Reflection.PropertyInfo)">
+            <summary>Creates a TypedPropertyAccessor for the specified property.</summary>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.TypedPropertyAccessor`2.Property">
+            <summary>Gets the property being accessed.</summary>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.TypedPropertyAccessor`2.JsonName">
+            <summary>Gets the name to use when serializing this property to JSON.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypedPropertyAccessor`2.GetValue(`0)">
+            <summary>Gets the value of this property from the specified instance.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.TypeExtensions">
+            <summary>Contains extension methods for Type instances.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypeExtensions.IsScalarType(System.Type)">
+            <summary>Checks whether a type is valid as a single settings value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypeExtensions.IsSettingsType(System.Type)">
+            <summary>Checks whether a type inherits <see cref="T:ConfOxide.SettingsBase`1"/>.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypeExtensions.GetListElementType(System.Type)">
+            <summary>Gets the element type of a type inheriting <see cref="T:System.Collections.Generic.IList`1"/>, or null for non-List types.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypeExtensions.GetCustomAttribute``1(System.Reflection.ICustomAttributeProvider)">
+            <summary>Gets a custom attribute, if defined on the specified member.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.ScalarType`1">
+            <summary>Holds compiled delegates that interact with strongly-typed scalar values.</summary>
+        </member>
+        <member name="F:ConfOxide.MemberAccess.ScalarType`1.ToJson">
+            <summary>Creates a <see cref="T:Newtonsoft.Json.Linq.JValue"/> holding a strongly typed value.</summary>
+        </member>
+        <member name="F:ConfOxide.MemberAccess.ScalarType`1.FromJson">
+            <summary>Parses a <see cref="T:Newtonsoft.Json.Linq.JValue"/> value into a strongly-typed value.</summary>
+        </member>
+        <member name="F:ConfOxide.MemberAccess.ScalarType`1.FromObject">
+            <summary>Converts an arbitrary non-null object into a strongly-typed value.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.ScalarTypeInfo">
+            <summary>Holds static fields used by <see cref="T:ConfOxide.MemberAccess.ScalarType`1"/>.  Using a separate class prevents us from having one copy of the field for each type.</summary>
+        </member>
+        <member name="F:ConfOxide.MemberAccess.ScalarTypeInfo.JsonConvertibleTypes">
+            <summary>Maps types that have no JToken constructor to types they're convertible to that do.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.ValuePropertyAccessor`2">
+            <summary>A PropertyAccessor for a scalar property.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.#ctor(System.Reflection.PropertyInfo)">
+            <summary>Creates a <see cref="T:ConfOxide.MemberAccess.ValuePropertyAccessor`2"/> for the specified property.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.Copy(`0,`0)">
+            <summary>Copies the value of this property from one owning object to another.</summary>
+            <param name="from">The instance to read the value from.</param>
+            <param name="to">The instance to write the value to.</param>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.ResetValue(`0)">
+            <summary>Resets the value of this property on an owning object to its default value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.CompareValues(`0,`0)">
+            <summary>Compares the values of the property from two owning objects.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.FromJson(`0,Newtonsoft.Json.Linq.JToken)">
+            <summary>Reads this property's value from a JSON token into an instance.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.UpdateJsonProperty(`0,Newtonsoft.Json.Linq.JProperty)">
+            <summary>Updates the value of a JProperty to reflect this property's value.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ValuePropertyAccessor`2.InitializeValue(`0)">
+            <summary>Does nothing; value properties do not need initialization.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.TypeAccessor`1">
+            <summary>Holds statically cached metadata and compiled property accessors for any type.</summary>
+            <typeparam name="T">The type that owns the properties.</typeparam>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.TypeAccessor`1.Properties">
+            <summary>Gets all properties on this type that are supported settings properties.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.TypeAccessor`1.TryGetJsonProperty(System.String,ConfOxide.MemberAccess.IPropertyAccessor{`0}@)">
+            <summary>Gets the property with the specified JSON serialization name, if any.</summary>
+        </member>
+        <member name="F:ConfOxide.MemberAccess.TypeAccessor`1.CreateInstance">
+            <summary>Creates a new instance of <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.TypeAccessor`1.Error">
+            <summary>Gets an error message describing properties of this type that are not recognized as settings properties, or null if the type has no errors.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.PropertyCollection`1">
+            <summary>A collection of strongly-typed property accessors, indexed by property name.</summary>
+            <typeparam name="T">The type that owns the properties.</typeparam>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.PropertyCollection`1.GetKeyForItem(ConfOxide.MemberAccess.IPropertyAccessor{`0})">
+            <summary>Gets the dictionary key for the specified item.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.PropertyCollection`1.TryGetValue(System.String,ConfOxide.MemberAccess.IPropertyAccessor{`0}@)">
+            <summary>Gets the value of the specified key, if present.</summary>
+        </member>
+        <member name="T:ConfOxide.MemberAccess.ReadOnlyPropertyCollection`1">
+            <summary>A collection of strongly-typed property accessors, indexed by property name.</summary>
+            <typeparam name="T">The type that owns the properties.</typeparam>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ReadOnlyPropertyCollection`1.#ctor(ConfOxide.MemberAccess.PropertyCollection{`0})">
+            <summary>Creates a <see cref="T:ConfOxide.MemberAccess.ReadOnlyPropertyCollection`1"/> wrapping a <see cref="T:ConfOxide.MemberAccess.PropertyCollection`1"/>.</summary>
+        </member>
+        <member name="M:ConfOxide.MemberAccess.ReadOnlyPropertyCollection`1.TryGetValue(System.String,ConfOxide.MemberAccess.IPropertyAccessor{`0}@)">
+            <summary>Gets the value of the specified key, if present.</summary>
+        </member>
+        <member name="P:ConfOxide.MemberAccess.ReadOnlyPropertyCollection`1.Item(System.String)">
+            <summary>Gets the property with the specified key.</summary>
+        </member>
+        <member name="T:ConfOxide.SettingsBase`1">
+            <summary>A base class for a strongly-typed settings class.</summary>
+            <typeparam name="T">The concrete type of the derived class (using the CRTP).  This allows fast and type-safe lookup of compiled property accessors.</typeparam>
+            <remarks>
+             Concrete settings classes must be sealed.
+             To share logic between different settings
+             classes, create an abstract class.  These
+             classes must maintain the type parameter,
+             so that the concrete class will still use
+             the CRTP.
+             
+             This is necessary to allow member lookups
+             using the type system.
+            </remarks>
+        </member>
+        <member name="M:ConfOxide.SettingsBase`1.#ctor">
+            <summary>Initializes a new SettingsBase instance.  If the derived class has invalid properties, this will throw an exception.</summary>
+        </member>
+        <member name="M:ConfOxide.SettingsBase`1.ResetCustom">
+            <summary>
+             Called by <see cref="M:ConfOxide.SettingsExtensions.ResetValues``1(``0)"/> after resetting all properties.  
+             Derived classes can override this method to apply custom default values (eg, for collection properties).
+            </summary>
+        </member>
+        <member name="T:ConfOxide.SettingsExtensions">
+            <summary>Contains basic pre-compiled operations for settings classes.</summary>
+            <remarks>
+             These are implemented as extension methods so that
+             they get a reference of type T rather than <see cref="T:ConfOxide.SettingsBase`1"/>.
+            </remarks>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.IsEquivalentTo``1(``0,``0)">
+            <summary>Checks whether two <see cref="T:ConfOxide.SettingsBase`1"/> instances hold the same values.</summary>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.ResetValues``1(``0)">
+            <summary>Resets all settings on a <see cref="T:ConfOxide.SettingsBase`1"/> instance to their default values.</summary>
+            <returns>The <paramref name="instance"/>, for chaining.</returns>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.AssignFrom``1(``0,``0)">
+            <summary>Copies all settings from one <see cref="T:ConfOxide.SettingsBase`1"/> instance to another.</summary>
+            <param name="target">The instance to write the values to.</param>
+            <param name="source">The instance to read the values from.</param>
+            <returns>The <paramref name="target"/> instance, for chaining.</returns>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.CreateCopy``1(``0)">
+            <summary>Creates a deep copy of a <see cref="T:ConfOxide.SettingsBase`1"/> object, holding the same values as the original.</summary>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.ReadJson``1(``0,Newtonsoft.Json.Linq.JObject)">
+            <summary>Updates a <see cref="T:ConfOxide.SettingsBase`1"/> instance from a JSON object.</summary>
+            <returns>The <paramref name="target"/> instance, for chaining.</returns>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.UpdateJson``1(``0,Newtonsoft.Json.Linq.JObject)">
+            <summary>Updates an existing JSON document from a <see cref="T:ConfOxide.SettingsBase`1"/> instance.</summary>
+            <returns>The <paramref name="source"/> instance, for chaining.</returns>
+            <remarks>The order of any existing properties in the JSON objects will be preserved.</remarks>
+        </member>
+        <member name="M:ConfOxide.SettingsExtensions.ToJson``1(``0)">
+            <summary>Serializes a <see cref="T:ConfOxide.SettingsBase`1"/> to a new JSON document.</summary>
+             <remarks>The properties in the JSON will be sorted alphabetically.</remarks>
+        </member>
+        <member name="T:ConfOxide.SettingsFileExtensions">
+            <summary>Contains extension methods for reading and writing <see cref="T:ConfOxide.SettingsBase`1"/> instances from files on disk.</summary>
+            <remarks>This class contains convenience wrappers around JSON.Net and file IO.</remarks>
+        </member>
+        <member name="M:ConfOxide.SettingsFileExtensions.ReadJsonFile``1(``0,System.String)">
+            <summary>Updates a <see cref="T:ConfOxide.SettingsBase`1"/> instance from a JSON file, if it exists.</summary>
+            <returns>The <paramref name="target"/> instance, for chaining.</returns>
+        </member>
+        <member name="M:ConfOxide.SettingsFileExtensions.WriteJsonFile``1(``0,System.String)">
+            <summary>Creates or updates a JSON file from a <see cref="T:ConfOxide.SettingsBase`1"/> instance.</summary>
+            <returns>The <paramref name="source"/> instance, for chaining.</returns>
+        </member>
+    </members>
+</doc>

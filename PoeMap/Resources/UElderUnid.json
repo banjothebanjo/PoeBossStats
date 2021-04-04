@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "name": "",
+      "baseType": "Maelström Staff",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Penetrating Arrow Quiver",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Steel Ring",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Opal Ring",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Prismatic Jewel",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Hubris Circlet",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Infernal Sword",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Blood Raiment",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "The Gulf",
+      "identified": true,
+      "frameType": 6
+    }
+  ]
+}

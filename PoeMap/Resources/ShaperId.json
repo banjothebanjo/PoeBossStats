@@ -1,0 +1,46 @@
+{
+"items" : [
+	{
+		"name": "Dying Sun",
+		"baseType": "Ruby Flask",
+		"identified": true,
+        "frameType": 3
+	},
+	{
+		"name": "Shaper's Touch",
+		"baseType": "Crusader Gloves",
+		"identified": true,
+		"frameType": 3
+	},
+	{
+		"name": "Starforge",
+		"baseType": "Infernal Sword",
+		"identified": true,
+		"frameType": 3
+	},
+	{
+		"name": "Voidwalker",
+		"baseType": "Murder Boots",
+		"identified": true,
+		"frameType": 3
+	},
+	{
+		"name": "Solstice Vigil",
+		"baseType": "Onyx Amulet",
+		"identified": true,
+		"frameType": 3
+	},
+	{
+		"name": "Fragment of Shape",
+		"baseType": "Fragment of Shape",
+		"identified": true,
+		"frameType": 0
+	},
+	{
+		"name": "Fragment of Knowledge",
+		"baseType": "Fragment of Knowledge",
+		"identified": true,
+		"frameType": 0
+	},
+]
+}

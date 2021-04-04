@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeBossStats", "PoeBossStats\PoeBossStats.csproj", "{90CEBF8F-6074-4042-8295-17C8B0E4D301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurker", "Lurker\Lurker.csproj", "{AE684DC3-C965-41C5-A1BE-A8308043A56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeApi", "PoeApi\PoeApi.csproj", "{DD9964AA-2D18-4D68-824A-5B6FEF8A77AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeMap", "PoeMap\PoeMap.csproj", "{F3666761-B63A-470A-8D65-2B174E3401A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90CEBF8F-6074-4042-8295-17C8B0E4D301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CEBF8F-6074-4042-8295-17C8B0E4D301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CEBF8F-6074-4042-8295-17C8B0E4D301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CEBF8F-6074-4042-8295-17C8B0E4D301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE684DC3-C965-41C5-A1BE-A8308043A56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE684DC3-C965-41C5-A1BE-A8308043A56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE684DC3-C965-41C5-A1BE-A8308043A56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE684DC3-C965-41C5-A1BE-A8308043A56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9964AA-2D18-4D68-824A-5B6FEF8A77AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9964AA-2D18-4D68-824A-5B6FEF8A77AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9964AA-2D18-4D68-824A-5B6FEF8A77AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9964AA-2D18-4D68-824A-5B6FEF8A77AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3666761-B63A-470A-8D65-2B174E3401A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3666761-B63A-470A-8D65-2B174E3401A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3666761-B63A-470A-8D65-2B174E3401A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3666761-B63A-470A-8D65-2B174E3401A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9747CA7D-861E-4C3E-9CD8-856882D8A2F0}
+	EndGlobalSection
+EndGlobal

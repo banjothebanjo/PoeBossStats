@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "name": "Disintegrator",
+      "baseType": "Maelström Staff",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Voidfletcher",
+      "baseType": "Penetrating Arrow Quiver",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Mark of the Elder",
+      "baseType": "Steel Ring",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Mark of the Shaper",
+      "baseType": "Opal Ring",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Watcher's Eye",
+      "baseType": "Prismatic Jewel",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Indigon",
+      "baseType": "Hubris Circlet",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Voidforge",
+      "baseType": "Infernal Sword",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "The Eternity Shroud",
+      "baseType": "Blood Raiment",
+      "identified": true,
+      "frameType": 0
+    },
+    {
+      "name": "The Gulf",
+      "baseType": "The Gulf",
+      "identified": true,
+      "frameType": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "name": "Impresence",
+      "baseType": "Onyx Amulet",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Nebuloch",
+      "baseType": "Nightmare Mace",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Cyclopean Coil",
+      "baseType": "Leather Belt",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Blasphemer's Grasp",
+      "baseType": "Assassin's Mitts",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Watcher's Eye",
+      "baseType": "Prismatic Jewel",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Hopeshredder",
+      "baseType": "Ranger Bow",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Shimmeron",
+      "baseType": "Tornado Wand",
+      "identified": true,
+      "frameType": 3
+    },
+    {
+      "name": "Fragment of Terror",
+      "baseType": "Fragment of Terror",
+      "identified": true,
+      "frameType": 0
+    },
+    {
+      "name": "Fragment of Emptiness",
+      "baseType": "Fragment of Emptiness",
+      "identified": true,
+      "frameType": 0
+    }
+  ]
+}

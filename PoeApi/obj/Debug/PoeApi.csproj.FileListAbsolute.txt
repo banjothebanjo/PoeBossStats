@@ -1,0 +1,10 @@
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\PoeApi.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\PoeApi.pdb
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\RestSharp.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\bin\Debug\RestSharp.xml
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\obj\Debug\PoeApi.csproj.CoreCompileInputs.cache
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\obj\Debug\PoeApi.csproj.CopyComplete
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\obj\Debug\PoeApi.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeApi\obj\Debug\PoeApi.pdb

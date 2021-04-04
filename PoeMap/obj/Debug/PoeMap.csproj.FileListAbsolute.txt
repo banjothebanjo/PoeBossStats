@@ -1,0 +1,13 @@
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\obj\Debug\PoeMap.csprojAssemblyReference.cache
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\obj\Debug\PoeMap.csproj.CoreCompileInputs.cache
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\PoeMap.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\PoeMap.pdb
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\PoeApi.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\RestSharp.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\PoeApi.pdb
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\bin\Debug\RestSharp.xml
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\obj\Debug\PoeMap.csproj.CopyComplete
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\obj\Debug\PoeMap.dll
+C:\Users\Benjamin\source\repos\PoeBossStats\PoeMap\obj\Debug\PoeMap.pdb

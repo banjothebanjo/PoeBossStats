@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "name": "",
+      "baseType": "Onyx Amulet",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Nightmare Mace",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Leather Belt",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Assassin's Mitts",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Prismatic Jewel",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Ranger Bow",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Tornado Wand",
+      "identified": false,
+      "frameType": 3
+    },
+    {
+      "name": "",
+      "baseType": "Fragment of Terror",
+      "identified": true,
+      "frameType": 0
+    },
+    {
+      "name": "",
+      "baseType": "Fragment of Emptiness",
+      "identified": true,
+      "frameType": 0
+    }
+  ]
+}

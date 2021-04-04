@@ -1,0 +1,34 @@
+{
+"items" : [
+	{
+		"name": "",
+		"baseType": "Ruby Flask",
+		"identified": false,
+        "frameType": 3
+	},
+	{
+		"name": "",
+		"baseType": "Crusader Gloves",
+		"identified": false,
+        "frameType": 3
+	},
+	{
+		"name": "",
+		"baseType": "Infernal Sword",
+		"identified": false,
+		"frameType": 3
+	},
+	{
+		"name": "",
+		"baseType": "Murder Boots",
+		"identified": false,
+		"frameType": 3
+	},
+	{
+		"name": "",
+		"baseType": "Onyx Amulet",
+		"identified": false,
+		"frameType": 3
+	}
+]
+}
