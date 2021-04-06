@@ -9,6 +9,7 @@ namespace PoeMap
 {
     public class MapInstance
     {
+        List<string> bossRooms = new List<string>() { "Chayula's Domain", "The Shaper's Realm", "The Apex of Sacrifice", "The Alluring Abyss", "Lair of the Hydra", "Lookout", "Palace", "Tower", "Absence of Value and Meaning", "Forge of the Phoenix", "Pit of the Chimera", "Lair of the Hydra", "Maze of the Minotaur" };
         public string IpAddress { get; set; }
         public string LocationName { get; set; }
         public bool IsBossLocation { get; set; }
@@ -17,9 +18,9 @@ namespace PoeMap
         public CharacterResponse EntryInventory { get; set; }
         public CharacterResponse ExitInventory { get; set; }
 
-        public CharacterResponse FoundItems { get; set; }
+        public Item[] FoundItems { get; set; }
 
-        public BossType bossType { get; set; }
+        public BossType? bossType = BossType.NONE;
 
         public MapInstance(string ipAddress,string locationName,bool isBossLocation)
         {
@@ -29,7 +30,7 @@ namespace PoeMap
             InstanceCreated = DateTime.Now;
         }
 
-        public BossType GetBossType(CharacterResponse foundItems, string locationName)
+        public BossType GetBossType(Item[] foundItems, string locationName)
         {
             if (locationName == "The Shaper's Realm" && BossLootHandler.IsShaperKill(foundItems))
             {
@@ -58,6 +59,10 @@ namespace PoeMap
             if (locationName == "Forge of the Phoenix" && BossLootHandler.IsPhoenixKill(foundItems))
             {
                 return BossType.The_Phoenix;
+            }
+            if (locationName == "Tower" && BossLootHandler.IsShaperKill(foundItems))
+            {
+                return BossType.The_Shaper;
             }
             return BossType.NONE;
         }

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
+using ControlzEx.Theming;
 using Lurker;
 using PoeMap;
 using PoeApi;
@@ -21,19 +23,19 @@ namespace PoeBossStats
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public PathOfExileProcessLurker _processLurker;
+        public MapInstanceHandler instanceHandler = new MapInstanceHandler();
         public PoeCharacterInventoryService apiService;
         public ClientLurker _clientlurker;
         public MapInstance _mapInstance;
-        List<string> bossRooms = new List<string>() { "Chayula's Domain", "The Shaper's Realm", "The Apex of Sacrifice", "The Alluring Abyss", "Lair of the Hydra", "Lookout", "Palace", "Tower", "Absence of Value and Meaning", "Forge of the Phoenix", "Pit of the Chimera", "Lair of the Hydra", "Maze of the Minotaur" };
-        private bool _isVisible;
 
         public MainWindow()
         {
             InitializeComponent();
             ClientCreation();
+            FillBossListUi();
             _clientlurker.LocationChanged += ClientLurker_LocationChanged;
             _clientlurker.Lurk();
         }
@@ -54,57 +56,72 @@ namespace PoeBossStats
 
         public void ClientLurker_LocationChanged(object sender, Lurker.Patreon.Events.LocationChangedEvent e)
         {
-            if (this._mapInstance != null && e.Location.EndsWith("Hideout") && _mapInstance.IsBossLocation)
+            var enteredmapTemp = instanceHandler.EnteredMap(e.Location, _clientlurker._instanceIp, _mapInstance);
+            var leftmapTemp = instanceHandler.LeftMap(e.Location, _clientlurker._instanceIp, _mapInstance);
+            if (enteredmapTemp == null && leftmapTemp != null)
             {
-                this.ExitInv.Items.Clear();
-                this.FoundInv.Items.Clear();
-                this._mapInstance.ExitInventory = CallApi();
-                foreach (var listItem in this._mapInstance.ExitInventory.items)
+                _mapInstance = leftmapTemp;
+                FillUi();
+            }
+            else if (leftmapTemp == null && enteredmapTemp != null)
+            {
+                _mapInstance = enteredmapTemp;
+                FillUi();
+            }
+        }
+
+        public void FillBossListUi()
+        {
+            var saveData = new SaveData();
+            var tempList = saveData.SelectData("The_Shaper,The_Elder", "Ritual");
+            var shaperList = tempList.Where(e => e.BossType == "The_Shaper");
+            var elderList = tempList.Where(e => e.BossType == "The_Elder");
+            this.ShaperListView.Items.Clear();
+            this.ElderListView.Items.Clear();
+            foreach (var item in shaperList)
+            {
+                this.ShaperListView.Items.Add(item);
+            }
+            foreach (var item in elderList)
+            {
+                this.ElderListView.Items.Add(item);
+            }
+        }
+
+        public void FillUi()
+        {
+            this.EntryInv.Items.Clear();
+            this.ExitInv.Items.Clear();
+            this.FoundInv.Items.Clear();
+
+            this.Character.Text = _mapInstance.EntryInventory.character.name;
+            this.Ascendancy.Text = _mapInstance.EntryInventory.character._class;
+            this.Level.Text = _mapInstance.EntryInventory.character.level.ToString();
+            this.League.Text = _mapInstance.EntryInventory.character.league;
+            instance_IP.Text = _mapInstance.IpAddress;
+            Mapname.Text = _mapInstance.LocationName;
+            IsBossRoom.Text = _mapInstance.IsBossLocation ? "Yes" : "No";
+            TimeEntered.Text = _mapInstance.InstanceCreated.ToString();
+            this.bossTypeName.Text = _mapInstance.bossType.ToString();
+            foreach (var listItem in _mapInstance.EntryInventory.items)
+            {
+                this.EntryInv.Items.Add(listItem);
+            }
+            if (_mapInstance.ExitInventory != null)
+            {
+                foreach (var listItem in this._mapInstance.ExitInventory?.items)
                 {
                     this.ExitInv.Items.Add(listItem);
                 }
-                this._mapInstance.FoundItems = LogBossLoot(this._mapInstance.EntryInventory, this._mapInstance.ExitInventory);
-                var bossType = this._mapInstance.GetBossType(_mapInstance.FoundItems, _mapInstance.LocationName);
-                this._mapInstance.bossType = bossType;
-                this.bossTypeName.Text = bossType.ToString();
-                foreach (var listItem in this._mapInstance.FoundItems.items)
+            }
+            if (_mapInstance.FoundItems != null)
+            {
+                foreach (var listItem in this._mapInstance.FoundItems)
                 {
                     this.FoundInv.Items.Add(listItem);
                 }
+                FillBossListUi();
             }
-            foreach (var item in bossRooms)
-            {
-                var yes = e.Location.EndsWith(item);
-                if (yes && _clientlurker._instanceIp != _mapInstance?.IpAddress)
-                {
-                    MapInstance mapInstance = new MapInstance(_clientlurker._instanceIp, e.Location, yes);
-                    instance_IP.Text = mapInstance.IpAddress;
-                    Mapname.Text = mapInstance.LocationName;
-                    IsBossRoom.Text = mapInstance.IsBossLocation ? "Yes" : "No";
-                    TimeEntered.Text = mapInstance.InstanceCreated.ToString();
-                    mapInstance.EntryInventory = CallApi();
-                    this.EntryInv.Items.Clear();
-                    foreach (var listItem in mapInstance.EntryInventory.items)
-                    {
-                        this.EntryInv.Items.Add(listItem);
-                    }
-                    this._mapInstance = mapInstance;
-                }
-            }
-        }
-
-        public CharacterResponse CallApi()
-        {
-            var apiService = new PoeCharacterInventoryService("https://www.pathofexile.com");
-            var response = apiService.GetMainInventoryData("Keymat20", "fifefeefs", "/character-window/get-items");
-            return response;
-        }
-
-        public CharacterResponse LogBossLoot(CharacterResponse entryInv, CharacterResponse exitInv)
-        {
-            var result = exitInv.items.Where(p => !entryInv.items.Any(l => p.id == l.id));
-            exitInv.items = result.ToArray();
-            return exitInv;
         }
 
         private void ExitInv_SelectionChanged(object sender, SelectionChangedEventArgs e)

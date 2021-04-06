@@ -266,6 +266,7 @@ namespace Lurker
                 this._lastLine = newLines.First();
                 foreach (var line in newLines)
                 {
+                    LocationIpAddress(line);
                     this.OnFileChanged(line);
                 }
 

@@ -1,49 +1,103 @@
-﻿<Window x:Class="PoeBossStats.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<mah:MetroWindow x:Class="PoeBossStats.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:PoeBossStats"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Name="instance_IP" HorizontalAlignment="Left" Margin="17,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Mapname" HorizontalAlignment="Left" Margin="17,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock x:Name="IsBossRoom" HorizontalAlignment="Left" Margin="17,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TimeEntered" HorizontalAlignment="Left" Margin="17,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <ListView x:Name="EntryInv" Margin="10,197,557,70" SelectionChanged="EntryInv_SelectionChanged">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="17,22,0,0" TextWrapping="Wrap" Text="Map Name" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="17,59,0,0" TextWrapping="Wrap" Text="Instance IP" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="17,96,0,0" TextWrapping="Wrap" Text="Is Boss Map" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="17,133,0,0" TextWrapping="Wrap" Text="Time Entered" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Entry Inventory" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ListView x:Name="ExitInv" Margin="265,197,269,70" SelectionChanged="ExitInv_SelectionChanged">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ListView x:Name="FoundInv" Margin="556,197,11,70">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
-                    <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="265,176,0,0" TextWrapping="Wrap" Text="Exit Inventory" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="556,176,0,0" TextWrapping="Wrap" Text="Found Items" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="212,25,0,0" TextWrapping="Wrap" Text="Boss " VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock Name="bossTypeName" HorizontalAlignment="Left" Margin="212,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <mah:MetroAnimatedTabControl>
+            <TabItem Header="BossKills">
+                <mah:MetroAnimatedTabControl>
+                    <TabItem Header="Shaper">
+                        <Grid>
+                            <ListView Margin="10,123,10,10" Name="ShaperListView">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Character" Width="auto" DisplayMemberBinding="{Binding Character}"/>
+                                        <GridViewColumn Header="Ascendancy" DisplayMemberBinding="{Binding Ascendancy}"/>
+                                        <GridViewColumn Header="Level" DisplayMemberBinding="{Binding Level}"/>
+                                        <GridViewColumn Header="League" DisplayMemberBinding="{Binding League}"/>
+                                        <GridViewColumn Header="Boss" DisplayMemberBinding="{Binding BossType}"/>
+                                        <GridViewColumn Header="Entered" DisplayMemberBinding="{Binding InstanceEntered}"/>
+                                        <GridViewColumn Header="Killed" DisplayMemberBinding="{Binding Created}"/>
+                                        <GridViewColumn Header="Items" DisplayMemberBinding="{Binding Items}"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Elder">
+                        <ListView Margin="10,123,10,10" Name="ElderListView">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Character" Width="auto" DisplayMemberBinding="{Binding Character}"/>
+                                    <GridViewColumn Header="Ascendancy" DisplayMemberBinding="{Binding Ascendancy}"/>
+                                    <GridViewColumn Header="Level" DisplayMemberBinding="{Binding Level}"/>
+                                    <GridViewColumn Header="League" DisplayMemberBinding="{Binding League}"/>
+                                    <GridViewColumn Header="Boss" DisplayMemberBinding="{Binding BossType}"/>
+                                    <GridViewColumn Header="Entered" DisplayMemberBinding="{Binding InstanceEntered}"/>
+                                    <GridViewColumn Header="Killed" DisplayMemberBinding="{Binding Created}"/>
+                                    <GridViewColumn Header="Items" DisplayMemberBinding="{Binding Items}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </TabItem>
+                    <TabItem Header="Sirus">
+                        <Grid>
+                        </Grid>
+                    </TabItem>
+                </mah:MetroAnimatedTabControl>
+            </TabItem>
 
+
+            <TabItem Header="Debug">
+                <Grid>
+                    <TextBlock Name="instance_IP" HorizontalAlignment="Left" Margin="17,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="Mapname" HorizontalAlignment="Left" Margin="17,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="IsBossRoom" HorizontalAlignment="Left" Margin="17,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="TimeEntered" HorizontalAlignment="Left" Margin="17,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <ListView x:Name="EntryInv" Margin="10,197,557,70" SelectionChanged="EntryInv_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
+                                <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBlock HorizontalAlignment="Left" Margin="17,22,0,0" TextWrapping="Wrap" Text="Map Name" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="17,59,0,0" TextWrapping="Wrap" Text="Instance IP" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="17,96,0,0" TextWrapping="Wrap" Text="Is Boss Map" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="17,133,0,0" TextWrapping="Wrap" Text="Time Entered" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Entry Inventory" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <ListView x:Name="ExitInv" Margin="265,197,269,70" SelectionChanged="ExitInv_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
+                                <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="FoundInv" Margin="556,197,11,70">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
+                                <GridViewColumn Header="BaseType" DisplayMemberBinding="{Binding baseType}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBlock HorizontalAlignment="Left" Margin="265,176,0,0" TextWrapping="Wrap" Text="Exit Inventory" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="556,176,0,0" TextWrapping="Wrap" Text="Found Items" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="212,25,0,0" TextWrapping="Wrap" Text="Boss " VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBlock Name="bossTypeName" HorizontalAlignment="Left" Margin="212,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock Name="Character" HorizontalAlignment="Left" Margin="441,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock Name="Ascendancy" HorizontalAlignment="Left" Margin="441,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock Name="Level" HorizontalAlignment="Left" Margin="441,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <TextBlock Name="League" HorizontalAlignment="Left" Margin="441,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </mah:MetroAnimatedTabControl>
     </Grid>
-</Window>
+</mah:MetroWindow>

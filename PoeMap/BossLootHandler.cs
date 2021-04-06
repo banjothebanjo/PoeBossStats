@@ -17,13 +17,13 @@ namespace PoeMap
 
         //Compares Exit inventory to ShaperId.json (this is possible shaper drops in JSON), if any items matching these json values, returns true = it was a shaper kill
         //This helps with fights like Uber elder, which is also in "Shaper's realm", so by checking on looted items, and letting that determine the boss type, is safer.
-        public static bool IsShaperKill(CharacterResponse exitInv)
+        public static bool IsShaperKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "ShaperId.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.name == l.name));
+                var result = items.items.Where(p => exitInv.Any(l => p.name == l.name));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -33,7 +33,7 @@ namespace PoeMap
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -42,13 +42,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsElderKill(CharacterResponse exitInv)
+        public static bool IsElderKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "ElderId.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.name == l.name));
+                var result = items.items.Where(p => exitInv.Any(l => p.name == l.name));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -58,7 +58,7 @@ namespace PoeMap
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -67,13 +67,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsUberElderKill(CharacterResponse exitInv)
+        public static bool IsUberElderKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "UElderId.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.name == l.name));
+                var result = items.items.Where(p => exitInv.Any(l => p.name == l.name));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -83,7 +83,7 @@ namespace PoeMap
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType && p.identified == l.identified && p.frameType == l.frameType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -92,13 +92,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsHydraKill(CharacterResponse exitInv)
+        public static bool IsHydraKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "Hydra.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -107,13 +107,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsPhoenixKill(CharacterResponse exitInv)
+        public static bool IsPhoenixKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "Phoenix.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -122,13 +122,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsMinotaurKill(CharacterResponse exitInv)
+        public static bool IsMinotaurKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "Minotaur.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType));
                 if (result.Count() > 0)
                 {
                     return true;
@@ -137,13 +137,13 @@ namespace PoeMap
             return false;
         }
 
-        public static bool IsChimeraKill(CharacterResponse exitInv)
+        public static bool IsChimeraKill(Item[] exitInv)
         {
             using (StreamReader r = new StreamReader(debugpath + "Chimera.json"))
             {
                 string json = r.ReadToEnd();
                 var items = JsonConvert.DeserializeObject<Models.BossItem>(json);
-                var result = items.items.Where(p => exitInv.items.Any(l => p.baseType == l.baseType));
+                var result = items.items.Where(p => exitInv.Any(l => p.baseType == l.baseType));
                 if (result.Count() > 0)
                 {
                     return true;

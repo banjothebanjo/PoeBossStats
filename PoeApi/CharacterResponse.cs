@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace PoeApi
         public string league { get; set; }
         public int classId { get; set; }
         public int ascendancyClass { get; set; }
+        [JsonProperty("class")]
         public string _class { get; set; }
         public int level { get; set; }
         public long experience { get; set; }
